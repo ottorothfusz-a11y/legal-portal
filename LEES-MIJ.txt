@@ -1,0 +1,19 @@
+ELVT documentportal
+
+1. Zet de map "legal" in de root van de repo infoscale-dashboard (naast index.html).
+2. Na de Vercel-deploy staat de portal op:  https://infoscale-orcin.vercel.app/legal/
+3. Eigen domein (legal.infoscale.io):
+   - Vercel > project > Settings > Domains > Add > legal.infoscale.io
+   - Bij je DNS-provider: CNAME  legal  ->  cname.vercel-dns.com
+   - Vercel regelt het SSL-certificaat zelf, meestal binnen een paar minuten.
+
+Bestanden
+- index.html                 de portal (aanbevolen). Naam van de lezer als watermerk, bevestigingsnummer.
+- index-zonder-script.html   reserve. Gebruik deze alleen als de site scripts blokkeert:
+                             hernoem hem dan naar index.html.
+
+Let op
+- Vastleggen wie wanneer heeft ingelogd gebeurt nog NIET. Dat vraagt een klein stukje server
+  (bijv. een Vercel Function die naar een database of e-mail schrijft). In index.html staat
+  bovenin CONFIG.api klaar; de developer vult daar het adres in.
+- Documenten 02, 03 en 04 staan nog als "Being added".
